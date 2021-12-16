@@ -1,5 +1,10 @@
 package gestorAplicacion.Lugares;
+import java.util.ArrayList;
+
 import gestorAplicacion.Embarcaciones.*;
+import gestorAplicacion.Items.Botin;
+import gestorAplicacion.Items.Objeto;
+import gestorAplicacion.Personas.Tripulacion;
 
 
 public class Puerto extends Lugar {
@@ -11,7 +16,12 @@ public class Puerto extends Lugar {
 	int precioCompraTripulacion;
 	private Barco barco;
 	
-	public Puerto(int precioArreglo, int precioMejAtaque, int precioMejDefensa, int precioMejCargaYTripulacion, int precioSalvoconducto, int precioCompraTripulacion){
+	public Puerto(String nombre, Tripulacion tripulacion, Botin botin,
+			ArrayList<Objeto> objetosAcceso, int precioArreglo, 
+			int precioMejAtaque, int precioMejDefensa, int precioMejCargaYTripulacion, 
+			int precioSalvoconducto, int precioCompraTripulacion){
+		
+		super(nombre, tripulacion, botin, objetosAcceso);
 		this.precioArreglo = precioArreglo;
 		this.precioMejAtaque = precioMejAtaque;
 		this.precioMejDefensa = precioMejDefensa;

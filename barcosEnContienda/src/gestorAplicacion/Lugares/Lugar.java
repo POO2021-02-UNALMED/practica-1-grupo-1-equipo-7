@@ -11,5 +11,13 @@ public class Lugar {
 	private Tripulacion tripulacion;
 	private Botin botin;
 	private ArrayList<Objeto> objetosAcceso;
+	public Lugar(String nombre, Tripulacion tripulacion, Botin botin, ArrayList<Objeto> objetosAcceso) {
 		
+		this.nombre = nombre;
+		this.tripulacion = tripulacion;
+		this.botin = botin;
+		this.objetosAcceso = objetosAcceso;
+	}
+	
+	
 }
