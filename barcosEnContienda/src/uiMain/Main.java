@@ -7,7 +7,10 @@ import gestorAplicacion.Items.*;
 import gestorAplicacion.Lugares.Isla;
 import gestorAplicacion.Lugares.Puerto;
 import java.util.Scanner;
+
+//Clase principal de ejecución
 public class Main {
+	//Variables banderas para el menu
 	static int opcion=-1;
 	static int opcionAux=-1;
 	static int opcionAux2=-1;
@@ -104,19 +107,22 @@ public class Main {
 		Puerto puerto1= new Puerto("Puerto Bello",null,botinPuerto1,null,75,75,75,75,75,75);
 		
 		
-		
+		//Objetos iniciales del barco del usuario
 		ArrayList<Objeto> objetosIniciales= new ArrayList<Objeto>();
 		
+		//Botin inicial
 		Botin botinInicial=new Botin(100,objetosIniciales);
 		
 		
-		
+		//Tripulación del barco pirata
 		Tripulacion piratas= new Tripulacion((int)(Math.random()*10+1),(int)(Math.random()*10+1),(int)(Math.random()*10+1),(int)(Math.random()*10+1),
 				(int)(Math.random()*10+1));
+		
 		System.out.print("Ingresa el apodo del capitan\n");
 		String nombreCap=(scanner.nextLine());
 		System.out.print("Ingresa el apodo del barco\n");
 		String nombreBarco=(scanner.nextLine());
+		//Creacion del barco con los atributos ingresados por el usuario
 		Barco barcoPirata= new Barco(nombreBarco,Faccion.PIRATA,(int)(Math.random()*10+1),(int)(Math.random()*10+1), botinInicial);
 		CapitanPirata capitanpirata= new CapitanPirata(nombreCap,(int)(Math.random()*10+1),(int)(Math.random()*10+1));
 		

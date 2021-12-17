@@ -1,5 +1,6 @@
 package gestorAplicacion.Items;
 
+//Clase para la creacion de objetos
 public class Objeto {
 	public String nombre;
 	public String descripcion;

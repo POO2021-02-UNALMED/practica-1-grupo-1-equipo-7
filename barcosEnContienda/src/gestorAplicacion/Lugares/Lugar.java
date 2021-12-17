@@ -6,6 +6,7 @@ import gestorAplicacion.Items.Botin;
 import gestorAplicacion.Items.Objeto;
 import gestorAplicacion.Personas.Tripulacion;
 
+//Clase únicamente usada para ser heredada
 public class Lugar {
 	public String nombre;
 	public Tripulacion tripulacion;

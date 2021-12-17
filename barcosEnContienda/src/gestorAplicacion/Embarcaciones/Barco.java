@@ -4,7 +4,7 @@ import gestorAplicacion.Personas.Capitanes;
 import gestorAplicacion.Items.*;
 import gestorAplicacion.Lugares.Isla;
 
-//Creacion de la clase barco
+//La clase Barco tiene como funcionalidad crear los objetos principales de la aplicación, y los atributos en los que interactúan entre sí y con las demás clases
 public class Barco {
 	//Atributos
 	public String nombre;
@@ -57,6 +57,7 @@ public class Barco {
 		}
 	}
 	
+	//Robar isla es diferente a robar barco, ya que no se ataca a través del barco, si no únicamente a través de los tripulantes
 	public boolean robarIsla(Isla isla) {
 		System.out.print("Asaltando isla");
 		if (this.deterioro<=50){

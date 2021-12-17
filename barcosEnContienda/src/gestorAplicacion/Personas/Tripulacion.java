@@ -1,5 +1,6 @@
 package gestorAplicacion.Personas;
 import gestorAplicacion.Lugares.*;
+//
 public class Tripulacion {
 	private Capitanes capitan;
 	public int cantidad_de_tripulantes;

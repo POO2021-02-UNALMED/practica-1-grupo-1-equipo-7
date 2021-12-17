@@ -6,7 +6,7 @@ import gestorAplicacion.Items.Botin;
 import gestorAplicacion.Items.Objeto;
 import gestorAplicacion.Personas.Tripulacion;
 
-
+//Clase cuya funcionalidad es el mejoramiento de caracteristicas y el intercambio de mercancias
 public class Puerto extends Lugar {
 	public int precioArreglo;
 	public int precioMejAtaque;
