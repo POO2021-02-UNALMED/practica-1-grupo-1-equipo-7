@@ -9,6 +9,6 @@ public class CapitanPirata extends Capitanes {
 	}
 	
 	public void yells() {
-		System.out.print("Ahoy!");
+		System.out.print("¡Ahoy!");
 	}
 }

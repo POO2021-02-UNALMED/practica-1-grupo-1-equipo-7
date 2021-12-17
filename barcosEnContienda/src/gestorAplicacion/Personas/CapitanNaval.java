@@ -8,6 +8,6 @@ public class CapitanNaval extends Capitanes {
 	}
 	
 	public void yells() {
-		System.out.print("Por el honor!");
+		System.out.print("¡Por el honor!");
 	}
 }
