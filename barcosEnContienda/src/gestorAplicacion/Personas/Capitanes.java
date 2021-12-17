@@ -5,15 +5,23 @@ public abstract class Capitanes {
 	private Barco barco;
 	private int liderazgo;
 	private int elocuencia;
-	private Tripulacion tripulacion;
+	public Tripulacion tripulacion;
 	
-	public Capitanes(String apodo, Barco barco, int liderazgo, int elocuencia, Tripulacion tripulacion){
+	public Capitanes(String apodo, int liderazgo, int elocuencia){
 		this.apodo=apodo;
-		this.barco=barco;
 		this.elocuencia=elocuencia;
 		this.liderazgo=liderazgo;
-		this.tripulacion=tripulacion;
+		
 	}
 	
 	public abstract void yells();
+	
+	public void vincularBarco(Barco barco) {
+		this.barco=barco;
+	}
+	public void vincularTripulacion(Tripulacion tripulacion) {
+		this.tripulacion=tripulacion;
+	}
+	
+	
 }

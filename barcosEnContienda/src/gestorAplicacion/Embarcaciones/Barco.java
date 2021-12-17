@@ -3,31 +3,23 @@ package gestorAplicacion.Embarcaciones;
 import gestorAplicacion.Personas.Capitanes;
 import gestorAplicacion.Items.*;
 
-public enum Barco {
-	PIRATA,
-	NAVAL,
-	FANTASMA,
-	CIVIL;
-	
-	private String nombre;
-	private Capitanes capitan;
-	private int velocidad;
-	private int ataque;
-	private int deterioro;
+public class Barco {
+	public String nombre;
+	public Capitanes capitan;
+	public Faccion faccion;
+	public int velocidad;
+	public int ataque;
+	public int defensa=5;
+	public int deterioro=0;
 	public Botin botin;
+	public int nivelDeBusqueda=0;
 	
-	private Barco(String nombre, Capitanes capitan, int velocidad, int ataque, int deterioro,
-			Botin botin) {
+	public Barco(String nombre, Faccion faccion, int velocidad, int ataque, Botin botin) {
 		this.nombre = nombre;
-		this.capitan = capitan;
+		this.faccion=faccion;
 		this.velocidad = velocidad;
 		this.ataque = ataque;
-		this.deterioro = deterioro;
 		this.botin = botin;
-	}
-
-	Barco() {
-		
 	}
 
 	public void atacar() {
@@ -42,6 +34,9 @@ public enum Barco {
 	public void huir() {
 	}
 	
+	public void vincularCapitan(Capitanes capitan) {
+		this.capitan=capitan;
+	}
 	public String getNombre() {
 		return nombre;
 	}
