@@ -226,6 +226,7 @@ public class Main {
 							
 							if (barcoCivil1.deterioro>=50) {
 								System.out.print("Has destruido el barco, puedes proceder a robarlo\n");
+								barcoPirata.nivelDeBusqueda++;
 							}
 						}
 						
