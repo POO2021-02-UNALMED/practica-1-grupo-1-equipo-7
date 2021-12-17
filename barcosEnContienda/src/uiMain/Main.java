@@ -109,12 +109,16 @@ public class Main {
 		
 		Botin botinInicial=new Botin(100,objetosIniciales);
 		
-		CapitanPirata capitanpirata= new CapitanPirata("PataPalo",(int)(Math.random()*10+1),(int)(Math.random()*10+1));
+		
 		
 		Tripulacion piratas= new Tripulacion((int)(Math.random()*10+1),(int)(Math.random()*10+1),(int)(Math.random()*10+1),(int)(Math.random()*10+1),
 				(int)(Math.random()*10+1));
-	
-		Barco barcoPirata= new Barco("BlackSails",Faccion.PIRATA,(int)(Math.random()*10+1),(int)(Math.random()*10+1), botinInicial);
+		System.out.print("Ingresa el apodo del capitan\n");
+		String nombreCap=(scanner.nextLine());
+		System.out.print("Ingresa el apodo del barco\n");
+		String nombreBarco=(scanner.nextLine());
+		Barco barcoPirata= new Barco(nombreBarco,Faccion.PIRATA,(int)(Math.random()*10+1),(int)(Math.random()*10+1), botinInicial);
+		CapitanPirata capitanpirata= new CapitanPirata(nombreCap,(int)(Math.random()*10+1),(int)(Math.random()*10+1));
 		
 		capitanpirata.vincularTripulacion(piratas);
 		capitanpirata.vincularBarco(barcoPirata);
