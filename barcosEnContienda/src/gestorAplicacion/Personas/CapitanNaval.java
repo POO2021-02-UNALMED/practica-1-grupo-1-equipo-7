@@ -1,13 +1,13 @@
 package gestorAplicacion.Personas;
 
-import gestorAplicacion.Embarcaciones.Barco;
+
 
 public class CapitanNaval extends Capitanes {
-	public CapitanNaval(String apodo, Barco barco, int liderazgo, int elocuencia, Tripulacion tripulacion) {
-		super(apodo, barco, liderazgo, elocuencia, tripulacion);
+	public CapitanNaval(String apodo, int liderazgo, int elocuencia) {
+		super(apodo, liderazgo, elocuencia);
 	}
 	
 	public void yells() {
-		System.out.print("¡Por el honor!");
+		System.out.print("Por el honor!\n");
 	}
 }
