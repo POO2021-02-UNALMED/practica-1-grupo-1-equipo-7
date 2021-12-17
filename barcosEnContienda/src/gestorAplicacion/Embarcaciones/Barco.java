@@ -2,6 +2,7 @@ package gestorAplicacion.Embarcaciones;
 
 import gestorAplicacion.Personas.Capitanes;
 import gestorAplicacion.Items.*;
+import gestorAplicacion.Lugares.Isla;
 
 public class Barco {
 	public String nombre;
@@ -48,6 +49,39 @@ public class Barco {
 			return false;
 		}
 	}
+	
+	public boolean robarIsla(Isla isla) {
+		System.out.print("Asaltando isla");
+		if (this.deterioro<=50){
+			this.capitan.tripulacion.cantidad_de_tripulantes=(int)(this.capitan.tripulacion.cantidad_de_tripulantes-(this.capitan.liderazgo*0.2)-2);
+			isla.tripulacion.cantidad_de_tripulantes=(int)(isla.tripulacion.cantidad_de_tripulantes-(this.capitan.liderazgo*0.2)-3);
+			if (this.capitan.tripulacion.cantidad_de_tripulantes>0) {
+				this.botin.oro = this.botin.oro + isla.botin.oro;
+				isla.botin.oro = 0;
+				this.botin.objetos.add(isla.botin.objetos.get(0));
+				isla.botin.objetos.clear();
+				return true;
+			} else {
+				this.capitan.tripulacion.cantidad_de_tripulantes = 0;
+				return false;
+			}
+		}
+		else {
+			this.capitan.tripulacion.cantidad_de_tripulantes=(int)(this.capitan.tripulacion.cantidad_de_tripulantes-(this.capitan.liderazgo*0.2)-3);
+			isla.tripulacion.cantidad_de_tripulantes=(int)(isla.tripulacion.cantidad_de_tripulantes-(this.capitan.liderazgo*0.2)-1);
+			if (this.capitan.tripulacion.cantidad_de_tripulantes>0) {
+				this.botin.oro = this.botin.oro + isla.botin.oro;
+				isla.botin.oro = 0;
+				this.botin.objetos.add(isla.botin.objetos.get(0));
+				isla.botin.objetos.clear();
+				return true;
+				} else {
+				this.capitan.tripulacion.cantidad_de_tripulantes = 0;
+				return false;
+			}
+		}
+	}
+
 	
 	@Override
 	public String toString() {

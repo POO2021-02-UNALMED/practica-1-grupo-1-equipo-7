@@ -41,7 +41,7 @@ public class Main {
 		Botin botinPuerto1 = new Botin(1000000,llave2);
 		//Creacion de barcos civiles
 		
-		Barco barcoCivil1= new Barco("Barco civil",Faccion.CIVIL,2,2,botinBarcosCiviles);
+		Barco barcoCivil1= new Barco("Barco civil",Faccion.CIVIL,1,1,botinBarcosCiviles);
 		
 		
 		//Creacion de barcos navales
@@ -97,7 +97,7 @@ public class Main {
 		objetosNecesariosIsla1.add(llave1);
 		objetosNecesariosIsla1.add(mapa1);
 		Isla isla1=new Isla("Isla maldita",tripulacionIsla1,botinIsla1,objetosNecesariosIsla1);
-		
+		isla1.vincularTripulacion(tripulacionIsla1);
 		
 		//Creacion de Puertos
 		
@@ -130,7 +130,7 @@ public class Main {
 						"\n2.- Buscar barcos civiles" +
 						"\n3.- Buscar barcos navales" +
 						"\n4.- Buscar barco fantasma" +
-						"\n5.- Ir a isla"+
+						"\n5.- Asaltar isla"+
 						"\n0.- Salir");
 				//Recoger una variable por consola
 				opcion = Integer.parseInt(scanner.nextLine()); 
@@ -311,8 +311,7 @@ public class Main {
 							if (barcoPirata.botin.objetos.contains(aguaBendita)){
 								System.out.print("Has usado agua bendita\n");
 								atacarfantasma=1;
-								aguaBendita.Usar();
-								aguaBendita.destruir();
+											
 								barcoPirata.botin.objetos.remove(aguaBendita);
 								barcoPirata.atacar(barcoFantasma);
 								barcoFantasma.deterioro=50;
@@ -359,7 +358,39 @@ public class Main {
 						
 						}
 					break;
+				
+				case 5: 
+					barcoPirata.botin.objetos.add(llave1);
+					int cont = 0;
+					for(Objeto objeto: barcoPirata.botin.objetos) {
+						if(objeto == llave1 || objeto == mapa1) {
+							cont ++;
+						}	
+					}
+					if(cont == 2){
+						Objeto.destruir(llave1);
+						Objeto.destruir(mapa1);
+						isla1.barco = barcoPirata;
+						if(barcoPirata.robarIsla(isla1)) {
+							if(isla1.tripulacion.cantidad_de_tripulantes<0) { isla1.tripulacion.cantidad_de_tripulantes=0;};
+							System.out.println("¡Asalto exitoso!");
+							System.out.println("Resumen:");
+							System.out.println("Tripulacion de barco: " + barcoPirata.capitan.tripulacion.cantidad_de_tripulantes);
+							System.out.println("Tripulacion de isla: " + isla1.tripulacion.cantidad_de_tripulantes);
+							return;
+						} else {
+							if(isla1.tripulacion.cantidad_de_tripulantes<0) { isla1.tripulacion.cantidad_de_tripulantes=0;};
+							System.out.println("Asalto fallido");
+							System.out.println("Resumen:");
+							System.out.println("Tripulacion de barco: " + barcoPirata.capitan.tripulacion.cantidad_de_tripulantes);
+							System.out.println("Tripulacion de isla: " + isla1.tripulacion.cantidad_de_tripulantes);
+							return;
+						}
+						
+					}
 					
+					System.out.println("Lo siento, aún no tienes los objetos necesarios para asaltar esta isla");
+					break;
 				case 0: 
 					System.out.println("Adios!");
 					break;

@@ -10,5 +10,8 @@ public class Objeto {
 		this.descripcion=descripcion;
 	}
 	public void Usar() {}
-	public void destruir() {}
+	public static void destruir(Objeto objeto) {
+		objeto.nombre = "xxxxx";
+		objeto.descripcion = "xxxxx";
+	}
 }
