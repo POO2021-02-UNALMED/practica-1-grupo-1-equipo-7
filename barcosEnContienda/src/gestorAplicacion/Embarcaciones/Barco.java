@@ -4,7 +4,9 @@ import gestorAplicacion.Personas.Capitanes;
 import gestorAplicacion.Items.*;
 import gestorAplicacion.Lugares.Isla;
 
+//Creacion de la clase barco
 public class Barco {
+	//Atributos
 	public String nombre;
 	public Capitanes capitan;
 	public Faccion faccion;
@@ -15,6 +17,7 @@ public class Barco {
 	public Botin botin;
 	public int nivelDeBusqueda=0;
 	
+	//Constructor
 	public Barco(String nombre, Faccion faccion, int velocidad, int ataque, Botin botin) {
 		this.nombre = nombre;
 		this.faccion=faccion;
@@ -22,22 +25,26 @@ public class Barco {
 		this.ataque = ataque;
 		this.botin = botin;
 	}
-
+	
+	//Metodos
 	public void atacar(Barco barco) {
+		//Formula para calcular el daño causado
 		barco.deterioro=barco.deterioro+this.ataque+this.capitan.liderazgo-barco.defensa;
 		if (barco.deterioro<0) {
 			barco.deterioro=0;
 		}
 		barco.capitan.tripulacion.cantidad_de_tripulantes--;
 		barco.velocidad--;
+		//Formula para calcular el daño recibido
 		this.deterioro=this.deterioro+barco.ataque+barco.capitan.liderazgo-this.defensa;
 		if (this.deterioro<0) {
 			this.deterioro=0;
 		}
 	}
 	
+	//Robar el barco
 	public boolean robar(Barco barco) {
-		
+		//Para robar el barco, es necesario primero, vencerlo
 		if (barco.deterioro>=50){
 			this.botin.oro=this.botin.oro+barco.botin.oro;
 			this.botin.objetos.addAll(barco.botin.objetos);
@@ -82,10 +89,12 @@ public class Barco {
 		}
 	}
 
-	
+	//Imprime las estadísticas de los barcos
 	@Override
 	public String toString() {
-		System.out.print(this.deterioro + "\n" + this.botin);
+		System.out.print("nombre: "+this.nombre+"\nCapitan: "+this.capitan.apodo+"\nDeterioro del barco: "+this.deterioro + "\n" + 
+	"Ataque: "+this.ataque+"\nDefensa: "+this.defensa+"\nVelocidad: "+this.velocidad+
+	"\nnivel de busqueda: "+this.nivelDeBusqueda+"\n");
 		
 		return "";
 	}

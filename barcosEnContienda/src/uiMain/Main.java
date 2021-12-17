@@ -131,6 +131,7 @@ public class Main {
 						"\n3.- Buscar barcos navales" +
 						"\n4.- Buscar barco fantasma" +
 						"\n5.- Asaltar isla"+
+						"\n6.- Ver estadísticas del barco"+
 						"\n0.- Salir");
 				//Recoger una variable por consola
 				opcion = Integer.parseInt(scanner.nextLine()); 
@@ -141,7 +142,7 @@ public class Main {
 					puerto1.barco=barcoPirata;
 					opcionAux=-1;
 					while(opcionAux!=0) {
-					System.out.println("Elige opción:\n1.- Arreglar barco: " +puerto1.precioArreglo+"\n"+
+					System.out.println("\nElige opción:\n1.- Arreglar barco: " +puerto1.precioArreglo+"\n"+
 							"\n2.- Mejorar Ataque " + puerto1.precioMejAtaque+"\n"+ 
 							"\n3.- Mejorar Defensa " + puerto1.precioMejDefensa+"\n"+
 							"\n4.- Mejorar Capacidad de Tripulacion " + puerto1.precioCompraTripulacion+"\n"+
@@ -188,12 +189,15 @@ public class Main {
 					break;
 				case 2: 
 					opcionAux=-1;
+					System.out.print("Capitan Pirata: ");
 					capitanpirata.yells();
+					System.out.print("Capitan enemigo: ");
 					capitanCivil1.yells();
 					while(opcionAux!=0) {
-						System.out.println("Elige opción:\n1.- atacar" +
+						System.out.println("\nElige opción:\n1.- atacar" +
 								"\n2.- robar" +
-								"\n3.- huir");
+								"\n3.- huir"+
+								"\n4.- Ver estadísticas del barco enemigo");
 								
 						
 						opcionAux=Integer.parseInt(scanner.nextLine()); 
@@ -228,6 +232,11 @@ public class Main {
 								System.out.print(barcoPirata.deterioro+"\n"+barcoPirata.botin.oro+" "+barcoPirata.botin.objetos);
 							}
 						}
+						
+						else if(opcionAux==4) {
+							barcoCivil1.toString();
+							break;
+						}
 						else {
 							opcionAux=0;
 							barcoCivil1.deterioro=0;
@@ -241,7 +250,9 @@ public class Main {
 					
 				case 3: 
 					opcionAux=-1;
+					System.out.print("Capitan Pirata: ");
 					capitanpirata.yells();
+					System.out.print("Capitan enemigo: ");
 					capitanNaval1.yells();
 					while(opcionAux!=0) {
 						System.out.println("Elige opción:\n1.- atacar" +
@@ -295,7 +306,9 @@ public class Main {
 				case 4: 
 					System.out.print(opcion);
 					opcionAux=-1;
+					System.out.print("Capitan Pirata: ");
 					capitanpirata.yells();
+					System.out.print("Capitan enemigo: ");
 					capitanFantasma.yells();
 					while(opcionAux!=0) {
 						System.out.println("Elige opción:\n1.- atacar" +
@@ -390,6 +403,9 @@ public class Main {
 					}
 					
 					System.out.println("Lo siento, aún no tienes los objetos necesarios para asaltar esta isla");
+					break;
+				case 6:
+					barcoPirata.toString();
 					break;
 				case 0: 
 					System.out.println("Adios!");

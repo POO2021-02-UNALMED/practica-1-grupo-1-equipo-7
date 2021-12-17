@@ -1,7 +1,7 @@
 package gestorAplicacion.Personas;
 import gestorAplicacion.Embarcaciones.*;
 public abstract class Capitanes {
-	private String apodo;
+	public String apodo;
 	public Barco barco;
 	public int liderazgo;
 	public int elocuencia;
