@@ -19,3 +19,4 @@ class Puerto(Lugar):
         if barco.botin.oro>=self._precioArreglo:
             barco.setDeterioro(0)
             barco.botin.oro=barco.botin.oro-self._precioArreglo
+        return

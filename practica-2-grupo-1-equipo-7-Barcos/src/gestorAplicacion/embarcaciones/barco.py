@@ -2,8 +2,7 @@
 
 from gestorAplicacion.embarcaciones.faccion import Faccion
 class Barco():
-    _totalBarcos=0
-    _totalBarcosDestruidos=0
+    
     def __init__(self, nombre, facc, velocidad, ataque, botin):
         self._nombre=nombre
         self._velocidad=velocidad

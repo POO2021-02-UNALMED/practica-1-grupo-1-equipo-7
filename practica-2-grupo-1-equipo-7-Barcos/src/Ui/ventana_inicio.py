@@ -13,7 +13,7 @@ from tkinter import messagebox
 from turtle import colormode, width
 from unicodedata import name
 
-from Ui.ventanaP import Ventana2
+from Ui.ventanaPrincipal import Ventana2
 
 class VentanaInicio(Tk):
     
@@ -214,7 +214,7 @@ class VentanaInicio(Tk):
         #Creacion de boton para ingreso a la Ventana Principal
         def irVentanaPrincipal():
             ventana2=Ventana2()
-            
+            VentanaInicio.iconify()
             ventana2.mainloop()
             pass
         btnEntPrincipal = tk.Button(master=frameInicioIzq, text="¡Ir a la aventura!",  bg="white", command=irVentanaPrincipal, font=("Arial", 20), bd=16)
