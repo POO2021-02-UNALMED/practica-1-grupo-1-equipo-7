@@ -117,55 +117,55 @@ class VentanaInicio(Tk):
         frameFotos = tk.Frame(master=frameInicioDer, bg="#920101")
         frameFotos.place(x=100, y=170)
         #Columna 0 Fila 0
-        foto1_1 = PhotoImage(file='src/Ui/J1.png')
+        foto1_1 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/J1.png')
         frameFoto1 = tk.Frame(master=frameFotos, borderwidth=10,  bg="#920101")
         frameFoto1.grid(row=0, column=0)
         labelFoto1_1 = tk.Label(master=frameFoto1, borderwidth=10,  bg="#920101")
         labelFoto1_1['image'] = foto1_1
         labelFoto1_1.pack()
-        foto1_2 = PhotoImage(file='src/Ui/C1.png')
+        foto1_2 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/C1.png')
         labelFoto1_2 = tk.Label(master=frameFoto1, borderwidth=10,  bg="#920101")
         labelFoto1_2['image'] = foto1_2
-        foto1_3 = PhotoImage(file='src/Ui/M1.png')
+        foto1_3 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/M1.png')
         labelFoto1_3 = tk.Label(master=frameFoto1, borderwidth=10,  bg="#920101")
         labelFoto1_3['image'] = foto1_3
         #Columna 1 Fila 0
-        foto2_1 = PhotoImage(file='src/Ui/J2.png')
+        foto2_1 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/J2.png')
         frameFoto2 = tk.Frame(master=frameFotos, borderwidth=10,  bg="#920101")
         frameFoto2.grid(row=1, column=0)
         labelFoto2_1 = tk.Label(master=frameFoto2, borderwidth=10,  bg="#920101")
         labelFoto2_1['image'] = foto2_1
         labelFoto2_1.pack()
-        foto2_2 = PhotoImage(file='src/Ui/C2.png')
+        foto2_2 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/C2.png')
         labelFoto2_2 = tk.Label(master=frameFoto2, borderwidth=10,  bg="#920101")
         labelFoto2_2['image'] = foto2_2
-        foto2_3 = PhotoImage(file='src/Ui/M2.png')
+        foto2_3 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/M2.png')
         labelFoto2_3 = tk.Label(master=frameFoto1, borderwidth=10,  bg="#920101")
         labelFoto2_3['image'] = foto2_3
         #Columna 0 Fila 1
-        foto3_1 = PhotoImage(file='src/Ui/J3.png')
+        foto3_1 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/J3.png')
         frameFoto3 = tk.Frame(master=frameFotos, borderwidth=10,  bg="#920101")
         frameFoto3.grid(row=0, column=1)
         labelFoto3_1 = tk.Label(master=frameFoto3, borderwidth=10,  bg="#920101")
         labelFoto3_1['image'] = foto3_1
         labelFoto3_1.pack()
-        foto3_2 = PhotoImage(file='src/Ui/C3.png')
+        foto3_2 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/C3.png')
         labelFoto3_2 = tk.Label(master=frameFoto3)
         labelFoto3_2['image'] = foto3_2
-        foto3_3 = PhotoImage(file='src/Ui/M3.png')
+        foto3_3 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/M3.png')
         labelFoto3_3 = tk.Label(master=frameFoto3, borderwidth=10,  bg="#920101")
         labelFoto3_3['image'] = foto3_3
         #Columna 1 Fila 1
-        foto4_1 = PhotoImage(file='src/Ui/J4.png')
+        foto4_1 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/J4.png')
         frameFoto4 = tk.Frame(master=frameFotos, borderwidth=10,  bg="#920101")
         frameFoto4.grid(row=1, column=1)
         labelFoto4_1 = tk.Label(master=frameFoto4, borderwidth=10,  bg="#920101")
         labelFoto4_1['image'] = foto4_1
         labelFoto4_1.pack()
-        foto4_2 = PhotoImage(file='src/Ui/C4.png')
+        foto4_2 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/C4.png')
         labelFoto4_2 = tk.Label(master=frameFoto3)
         labelFoto4_2['image'] = foto4_2
-        foto4_3 = PhotoImage(file='src/Ui/M4.png')
+        foto4_3 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/M4.png')
         labelFoto4_3 = tk.Label(master=frameFoto3, borderwidth=10,  bg="#920101")
         labelFoto4_3['image'] = foto4_3
 
@@ -188,11 +188,11 @@ class VentanaInicio(Tk):
             labelImgSistem5.place_forget()
             labelImgSistem1.place(x=30, y=160)
         #Importacion de imagenes asociadas al sistema y creación de sus respectivos label's
-        imgSistem1 = PhotoImage(file='src/Ui/imgAso1.png')
-        imgSistem2 = PhotoImage(file='src/Ui/imgAso2.png')
-        imgSistem3 = PhotoImage(file='src/Ui/imgAso3.png')
-        imgSistem4 = PhotoImage(file='src/Ui/imgAso4.png')
-        imgSistem5 = PhotoImage(file='src/Ui/imgAso5.png')
+        imgSistem1 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/imgAso1.png')
+        imgSistem2 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/imgAso2.png')
+        imgSistem3 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/imgAso3.png')
+        imgSistem4 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/imgAso4.png')
+        imgSistem5 = PhotoImage(file='C:/Users/USER/Documents/GitHub/practica-1-grupo-1-equipo-7/practica-2-grupo-1-equipo-7-Barcos/src/Ui/imgAso5.png')
         labelImgSistem1 = Label(master=frameInicioIzq)
         labelImgSistem1['image'] = imgSistem1
         labelImgSistem1.place(x=30, y=160)
