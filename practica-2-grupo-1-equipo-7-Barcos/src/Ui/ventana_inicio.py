@@ -24,7 +24,7 @@ class VentanaInicio(Tk):
         width= window.winfo_screenwidth()  
         height= window.winfo_screenheight() 
         window.geometry("%dx%d" % (width, height))
-        window.title("Tittle")
+        window.title("Barcos En Contienda")
         window.config(bg="#E9E9E9")
         window.option_add('*tearOff', False)
        
