@@ -1,3 +1,5 @@
+#Librerias
+
 from gestorAplicacion.embarcaciones.faccion import Faccion
 from gestorAplicacion.items.objeto import Objeto
 from gestorAplicacion.items.botin import Botin
@@ -9,7 +11,11 @@ from gestorAplicacion.personas.capitanPirata import CapitanPirata
 from gestorAplicacion.personas.tripulacion import Tripulacion
 from gestorAplicacion.lugares.isla import Isla
 from gestorAplicacion.lugares.puerto import Puerto
+
+from baseDatos.sdds import serializer
 import random
+import pickle
+
 
 #INICIALIZADORES DE OBJETOS
 llave1= Objeto("Llave maldita","Llave para abrir el cofre maldito")
@@ -112,3 +118,8 @@ capitanpirata= CapitanPirata(nombreCap,random.randint(1, 10),random.randint(1, 1
 capitanpirata.vincularTripulacion(piratas)
 capitanpirata.vincularBarco(barcoPirata)
 barcoPirata.vincularCapitan(capitanpirata)
+
+#sdds=serializer()
+#sdds.serialize(barcoPirata, capitanpirata, piratas)
+#capitanpirata, barcoPirata, piratas=sdds.deserialize()
+#print(capitanpirata.yells())
